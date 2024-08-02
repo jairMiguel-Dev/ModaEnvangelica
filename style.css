@@ -331,11 +331,13 @@ section h1 {
     justify-content: space-between;
     gap: 20px;
     padding: 20px;
+    margin: 0 auto; /* Centraliza o contêiner */
+    max-width: 1200px; /* Define um limite máximo para a largura */
 }
 
 .roupa {
-    flex: 1 1 200px;
-    max-width: 300px;
+    flex: 1 1 calc(33.333% - 40px); /* Ajusta a largura de cada item */
+    max-width: calc(33.333% - 40px); /* Ajusta a largura máxima de cada item */
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -391,6 +393,180 @@ section h1 {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+/* Media Queries for responsiveness */
+
+/* Laptops and tablets (landscape) */
+@media (max-width: 1024px) {
+    .Container-roupas {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .roupa {
+        flex: 1 1 calc(50% - 30px); /* Ajusta a largura para 50% menos gap */
+        max-width: calc(50% - 30px);
+        margin: 0.75rem;
+    }
+
+    .roupa p, .roupa h5 {
+        margin: 8px 15px;
+        font-size: 1em;
+    }
+
+    .buy-button {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+        margin: 15px auto 8px;
+    }
+}
+
+/* Tablets and large smartphones (portrait) */
+@media (max-width: 768px) {
+    .Container-roupas {
+        gap: 10px;
+        padding: 10px;
+        justify-content: center;
+        display: ruby;
+        padding: 17px;
+    }
+
+    .roupa {
+        flex: 1 1 calc(50% - 20px); /* Ajusta a largura para 50% menos gap */
+        max-width: calc(50% - 20px);
+        margin: 0.5rem;
+    }
+
+    .roupa p, .roupa h5 {
+        margin: 6px 10px;
+        font-size: 0.9em;
+    }
+
+    .buy-button {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        margin: 10px auto 6px;
+    }
+}
+
+/* Small smartphones */
+@media (max-width: 480px) {
+    .Container-roupas {
+        gap: 5px;
+        padding: 5px;
+        justify-content: center;
+        display: ruby;
+        padding: 17px;
+    }
+
+    .roupa {
+        flex: 1 1 100%; /* Ajusta a largura para 100% */
+        max-width: 100%;
+        margin: 0.25rem;
+    }
+
+    .roupa p, .roupa h5 {
+        margin: 4px 5px;
+        font-size: 0.8em;
+    }
+
+    .buy-button {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        margin: 5px auto 4px;
+    }
+}
+
+/* Very small smartphones */
+@media (max-width: 360px) {
+    .Container-roupas {
+        gap: 2px;
+        padding: 2px;
+        justify-content: center;
+        display: ruby;
+        padding: 17px;
+    }
+
+    .roupa {
+        flex: 1 1 100%; /* Ajusta a largura para 100% */
+        max-width: 100%;
+        margin: 0.125rem;
+    }
+
+    .roupa p, .roupa h5 {
+        margin: 2px 2px;
+        font-size: 0.7em;
+    }
+
+    .buy-button {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+        margin: 2px auto 2px;
+    }
+}
+
+/* Ultra small smartphones */
+@media (max-width: 320px) {
+    .Container-roupas {
+        gap: 1px;
+        padding: 1px;
+        justify-content: center;
+        display: ruby;
+        padding: 17px;
+    }
+
+    .roupa {
+        flex: 1 1 100%; /* Ajusta a largura para 100% */
+        max-width: 100%;
+        margin: 0.1rem;
+    }
+
+    .roupa p, .roupa h5 {
+        margin: 1px 1px;
+        font-size: 0.6em;
+    }
+
+    .buy-button {
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+        margin: 1px auto 1px;
+    }
+}
+
+/* Ultra ultra small smartphones */
+@media (max-width: 280px) {
+    .Container-roupas {
+        gap: 0;
+        padding: 0;
+        justify-content: center;
+        display: ruby;
+        padding: 17px;
+    }
+
+    .roupa {
+        flex: 1 1 100%; /* Ajusta a largura para 100% */
+        max-width: 100%;
+        margin: 0.05rem;
+    }
+
+    .roupa p, .roupa h5 {
+        margin: 0.5px 0.5px;
+        font-size: 0.5em;
+    }
+
+    .buy-button {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        margin: 0.5px auto 0.5px;
+    }
+}
+
 
 /* Brands */
 .Marcas {
